@@ -2,12 +2,8 @@ if [ -s ~/.bashrc ]; then
     source ~/.bashrc
 fi
 
-#export JAVA_HOME=$HOME/apps/oracle/jdk/current
-#export JAVA_HOME=$HOME/apps/oracle/jdk/jdk-1.8.0_45
+#export JAVA_HOME=$HOME/apps/oracle/jdk/jdk-1.8.0_171
 #export JAVA_OPTS="-Djava.net.preferIPv4Stack=true -Dnet.sf.ehcache.skipUpdateCheck=false"
-
-#export IDEA_JDK=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-#export IDEA_JDK_64=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 
 export M2_HOME=$HOME/apps/apache/maven/current
 export MVN_OPTS="-Xmx2G -Djava.net.preferIPv4Stack=true -Dnet.sf.ehcache.skipUpdateCheck=false"
