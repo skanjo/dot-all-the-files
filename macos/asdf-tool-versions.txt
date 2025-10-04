@@ -1,0 +1,26 @@
+FILE:/Users/samer/projects/github/skanjo/cook-for-your-family/.tool-versions
+nodejs 22.10.0
+END
+FILE:/Users/samer/projects/github/skanjo/samer.kanjo.net/.tool-versions
+nodejs 20.12.0
+END
+FILE:/Users/samer/projects/github/skanjo/epic-pet-clinic-micronaut-htmx/.tool-versions
+java graalvm-community-21.0.2
+nodejs 22.9.0
+END
+FILE:/Users/samer/.tool-versions
+java temurin-21.0.8+9.0.LTS
+nodejs 22.18.0
+pnpm 9.15.9
+erlang 28.0.2
+elixir 1.18.4-otp-28
+END
+FILE:/Users/samer/.asdf/plugin-index/.tool-versions
+nodejs     18.18.0
+shellcheck 0.9.0
+shfmt      3.7.0
+END
+FILE:/Users/samer/.asdf/plugins/erlang/.tool-versions
+shellcheck 0.7.1
+shfmt 3.3.0
+END

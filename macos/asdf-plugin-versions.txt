@@ -1,0 +1,6 @@
+elixir:1.18.4-otp-28
+erlang:28.0.2
+java:temurin-11.0.28+6
+java:temurin-21.0.8+9.0.LTS
+nodejs:22.18.0
+pnpm:9.15.9

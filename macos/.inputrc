@@ -12,4 +12,3 @@ set convert-meta off
 # Turn on case insensitivity for tab-completion
 # Ex.: type "doc<tab>" to search for "Documents"
 set completion-ignore-case On
-

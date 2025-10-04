@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Description:
+#   This script generates MD5 checksum files for given files, directories, or 
+#   patterns. It creates a checksum file with the original filename and a 
+#   ".md5" suffix in the same location.
+#
+# Usage:
+#   ./generate_md5 <file|directory|pattern>
+#
+# Examples:
+#   ./generate_md5 /path/to/file.txt    # Generates /path/to/file.txt.md5
+#   ./generate_md5 /path/to/directory/  # Generates .md5 files for all files in the directory
+#   ./generate_md5 "*.txt"              # Generates .md5 files for all .txt files found by ripgrep (rg)
+#
+# Dependencies:
+#   - md5sum (standard Linux utility)
+#   - ripgrep (optional, for pattern matching)
+#
+# Exit Codes:
+#   0 - Success
+#   1 - Error (invalid input or missing dependencies)
+
+if [[ -z "$1" ]]; then
+    echo "Error: No target specified. Please provide a file, directory, or pattern."
+    exit 1
+fi
+
+target="$1"
+
+if [[ -f "$target" ]]; then
+    # If the target is a file, generate checksum
+    md5sum "$target" > "${target}.md5"
+    echo "Checksum created: ${target}.md5"
+elif [[ -d "$target" ]]; then
+    # If the target is a directory, process all files recursively
+    find "$target" -type f | while read -r file; do
+        md5sum "$file" > "${file}.md5"
+        echo "Checksum created: ${file}.md5"
+    done
+else
+    # If the target is not a file or directory, assume it's a pattern for ripgrep (rg)
+    if command -v rg >/dev/null; then
+        rg --files "$target" | while read -r file; do
+            md5sum "$file" > "${file}.md5"
+            echo "Checksum created: ${file}.md5"
+        done
+    else
+        echo "Error: Target '$target' is not a valid file, directory, or pattern."
+        exit 1
+    fi
+fi

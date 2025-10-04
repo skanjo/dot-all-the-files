@@ -1,0 +1,18 @@
+[user]
+	name = Samer Kanjo
+	email = samer@kanjo.net
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIQSvVu/4pqrbn6ag/PSADqCj8VZvXgS9rhgPDNRTtSa
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = /Users/samer/.ssh/allowed_signers
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[core]
+	editor = subl -n -w
+	excludesfile = ~/.gitignore
+[init]
+	defaultBranch = main
